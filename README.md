@@ -19,13 +19,18 @@ For data storage: Feel free to use either internal storage or file or in-memory 
 > 6. Create appropriate unit tests (doesn't need to have 100% coverage)
 > 7. ** Add verification instructions to the README **
 
-GET /user/<userid>/sms
-POST /user/userid>/sms
+Pre-requisites
+> 1. brew install redis
+> 2. brew services start redis
+
+Sample Requests:
+> 1. GET /user/<userid>/sms
+> 2. POST /user/userid>/sms
   body: {"message": "this is a simple message"}
   content-type: applictation/json
   
-GET /user/<userid>/tweet
-POST /user/userid>/tweet
+> 1. GET /user/<userid>/tweet
+> 2. POST /user/userid>/tweet
   body: {"message": "this is a simple tweet"}
   content-type: applictation/json
   
@@ -41,5 +46,5 @@ This sample app runs on port 3000 and can be verified by going to http://localho
 ### Verification instructions
 Use this section to provide instructions to validate your work. Include sample requests..etc
 
-brew install redis
+
 

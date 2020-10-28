@@ -46,7 +46,7 @@ POST /user/userid>/tweet
 /test => for unit tests
 /routes => routes go here
 
-This sample app runs on port 3000 and can be verified by going to http://localhost:3000
+This sample app runs on port 8081 and can be verified by going to http://localhost:8081
 
 
 ### Verification instructions

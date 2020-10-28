@@ -60,31 +60,7 @@ let getUser = (userid, messgetype) => {
             }
         })
         stream.on('error', () => {
-            reject('failed to read sms messages!')
-        });
-        stream.on('end', () => {
-            resolve(user_messages)
-        });
-    })
-}
-
-let getUserTweets = (userid) => {
-    return new Promise((resolve, reject) => {
-        const stream = redis.scanStream({match: `user_${userid}_tweets_*`});
-        let user_messages = {};
-        stream.on("data", (resultKeys) => {
-            for (let i = 0; i < resultKeys.length; i++) {
-                console.log('key:' + resultKeys[i])
-                redis.get(resultKeys[i])
-                .then(function(value){
-                    console.log(resultKeys[i] + ':' + value)
-                    user_messages[resultKeys[i]] = value
-                    console.log(user_messages[resultKeys[i]])
-                })
-            }
-        })
-        stream.on('error', () => {
-            reject('failed to read sms messages!')
+            reject(`failed to read ${messgetype} messages!`)
         });
         stream.on('end', () => {
             resolve(user_messages)

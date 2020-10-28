@@ -19,6 +19,16 @@ For data storage: Feel free to use either internal storage or file or in-memory 
 > 6. Create appropriate unit tests (doesn't need to have 100% coverage)
 > 7. ** Add verification instructions to the README **
 
+GET /user/<userid>/sms
+POST /user/userid>/sms
+  body: {"message": "this is a simple message"}
+  content-type: applictation/json
+  
+GET /user/<userid>/tweet
+POST /user/userid>/tweet
+  body: {"message": "this is a simple tweet"}
+  content-type: applictation/json
+  
 
 #### Project structure
 /data/store.js => for file based storage

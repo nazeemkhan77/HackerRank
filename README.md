@@ -27,15 +27,19 @@ Sample Requests:
 ```javascript
   GET /user/<userid>/sms
 ```
-> 2. POST /user/userid>/sms
+```javascript
+  POST /user/userid>/sms
   body: {"message": "this is a simple message"}
   content-type: applictation/json
-  
-> 1. GET /user/<userid>/tweet
-> 2. POST /user/userid>/tweet
+```
+```javascript
+GET /user/<userid>/tweet
+```
+```javascript
+POST /user/userid>/tweet
   body: {"message": "this is a simple tweet"}
   content-type: applictation/json
-  
+```  
 
 #### Project structure
 /data/store.js => for file based storage

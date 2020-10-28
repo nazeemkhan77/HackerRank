@@ -24,7 +24,9 @@ Pre-requisites
 > 2. brew services start redis
 
 Sample Requests:
-> 1. GET /user/<userid>/sms
+```javascript
+  GET /user/<userid>/sms
+```
 > 2. POST /user/userid>/sms
   body: {"message": "this is a simple message"}
   content-type: applictation/json
